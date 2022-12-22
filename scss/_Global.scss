@@ -1,0 +1,20 @@
+body {
+  background-color: rgb(255, 255, 255);
+}
+a {
+  text-decoration: none;
+}
+.fm__maxh5height {
+  height: 60px;
+}
+
+.fm__cardhover {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.fm__cardhover:hover {
+  text-decoration: none;
+  color: #000000;
+  background-color: rgba(0, 0, 0, 0.2);
+}
