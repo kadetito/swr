@@ -64,29 +64,16 @@ export const getAllPlayersSlugs = async (): Promise<TeamsSlug[]> => {
   return slugs;
 };
 
-export const getCasessByTerm = async (term: string): Promise<ITeams[]> => {
+export const getTeamsByTerm = async (term: string): Promise<ITeams[]> => {
   term = term.toString().toLowerCase();
 
   await db.connect();
-  const casos = await Teams.find({
+  const teams = await Teams.find({
     $text: { $search: term },
-  })
-    .select("-createdAt -updatedAt -_id")
-    .lean();
+  }).lean();
 
   await db.disconnect();
-
-  // const updatedCasess = casos.map((caso) => {
-  //   caso.images = caso.images.map((image) => {
-  //     return image.includes("http")
-  //       ? image
-  //       : `${process.env.HOST_NAME}cases/${image}`;
-  //   });
-
-  //   return caso;
-  // });
-
-  return casos;
+  return JSON.parse(JSON.stringify(teams));
 };
 
 export const getAllCasess = async (): Promise<ITeams[]> => {

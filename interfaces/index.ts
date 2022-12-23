@@ -1,3 +1,3 @@
 export * from "./teams";
-export * from "./players";
+export * from "./dashboard";
 export * from "./user";

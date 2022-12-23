@@ -82,13 +82,6 @@ export const SideMenu = () => {
                 </ListItemIcon>
                 <ListItemText primary={"Perfil"} />
               </ListItem>
-
-              <ListItem button onClick={() => navigateTo("/orders/history")}>
-                <ListItemIcon>
-                  <ConfirmationNumberOutlined />
-                </ListItemIcon>
-                <ListItemText primary={"Mis Ordenes"} />
-              </ListItem>
             </>
           )}
 
@@ -157,11 +150,11 @@ export const SideMenu = () => {
                 <ListItemText primary={"Dashboard"} />
               </ListItem>
 
-              <ListItem button onClick={() => navigateTo("/admin/products")}>
+              <ListItem button onClick={() => navigateTo("/admin/teams")}>
                 <ListItemIcon>
                   <CategoryOutlined />
                 </ListItemIcon>
-                <ListItemText primary={"Productos"} />
+                <ListItemText primary={"Teams"} />
               </ListItem>
               <ListItem button onClick={() => navigateTo("/admin/orders")}>
                 <ListItemIcon>

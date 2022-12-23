@@ -16,9 +16,9 @@ import {
 import { ErrorOutline } from "@mui/icons-material";
 import { useForm } from "react-hook-form";
 
-import { AuthLayout } from "../../components/layouts";
-import { validations } from "../../utils";
 import { useRouter } from "next/router";
+import { AuthLayout } from "../../layouts/";
+import { validations } from "../../utils";
 
 type FormData = {
   email: string;

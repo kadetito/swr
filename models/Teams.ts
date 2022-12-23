@@ -48,7 +48,7 @@ const teamSchema = new Schema(
   }
 );
 
-teamSchema.index({ team_name: "text", league: "text" });
+teamSchema.index({ "$**": "text" });
 
 const Team: Model<ITeams> = mongoose.models.Team || model("Team", teamSchema);
 

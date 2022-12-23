@@ -30,35 +30,30 @@ import {
   UploadOutlined,
 } from "@mui/icons-material";
 
-import { AdminLayout } from "../../../components/layouts";
-import { IProduct } from "../../../interfaces";
-import { dbProducts } from "../../../database";
-import { tesloApi } from "../../../api";
-import { Product } from "../../../models";
-
-const validTypes = ["shirts", "pants", "hoodies", "hats"];
-const validGender = ["men", "women", "kid", "unisex"];
-const validSizes = ["XS", "S", "M", "L", "XL", "XXL", "XXXL"];
+import { AdminLayout } from "../../../layouts";
+import { ITeams } from "../../../interfaces";
+import { dbTeams } from "../../../database";
+import { tesloApi } from "../../../apidatabase";
+import { Teams } from "../../../models";
 
 interface FormData {
   _id?: string;
-  description: string;
-  images: string[];
-  inStock: number;
-  price: number;
-  sizes: string[];
+  team_name: string;
+  formal_name: string;
+  location_city: string;
+  year_foundation: string;
+  shield_image: string;
   slug: string;
-  tags: string[];
-  title: string;
-  type: string;
-  gender: string;
+  actually_squad_image: string;
+  first_wear_image: string;
+  second_wear_image: string;
 }
 
 interface Props {
-  product: IProduct;
+  product: ITeams;
 }
 
-const ProductAdminPage: FC<Props> = ({ product }) => {
+const TeamAdminPage: FC<Props> = ({ product }) => {
   const router = useRouter();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [newTagValue, setNewTagValue] = useState("");
@@ -77,9 +72,9 @@ const ProductAdminPage: FC<Props> = ({ product }) => {
 
   useEffect(() => {
     const subscription = watch((value, { name, type }) => {
-      if (name === "title") {
+      if (name === "team_name") {
         const newSlug =
-          value.title
+          value.team_name
             ?.trim()
             .replaceAll(" ", "_")
             .replaceAll("'", "")
@@ -91,81 +86,68 @@ const ProductAdminPage: FC<Props> = ({ product }) => {
     return () => subscription.unsubscribe();
   }, [watch, setValue]);
 
-  const onChangeSize = (size: string) => {
-    const currentSizes = getValues("sizes");
-    if (currentSizes.includes(size)) {
-      return setValue(
-        "sizes",
-        currentSizes.filter((s) => s !== size),
-        { shouldValidate: true }
-      );
-    }
+  // const onNewTag = () => {
+  //   const newTag = newTagValue.trim().toLocaleLowerCase();
+  //   setNewTagValue("");
+  //   const currentTags = getValues("tags");
 
-    setValue("sizes", [...currentSizes, size], { shouldValidate: true });
-  };
+  //   if (currentTags.includes(newTag)) {
+  //     return;
+  //   }
 
-  const onNewTag = () => {
-    const newTag = newTagValue.trim().toLocaleLowerCase();
-    setNewTagValue("");
-    const currentTags = getValues("tags");
+  //   currentTags.push(newTag);
+  // };
 
-    if (currentTags.includes(newTag)) {
-      return;
-    }
+  // const onDeleteTag = (tag: string) => {
+  //   const updatedTags = getValues("tags").filter((t) => t !== tag);
+  //   setValue("tags", updatedTags, { shouldValidate: true });
+  // };
 
-    currentTags.push(newTag);
-  };
+  // const onFilesSelected = async ({ target }: ChangeEvent<HTMLInputElement>) => {
+  //   if (!target.files || target.files.length === 0) {
+  //     return;
+  //   }
 
-  const onDeleteTag = (tag: string) => {
-    const updatedTags = getValues("tags").filter((t) => t !== tag);
-    setValue("tags", updatedTags, { shouldValidate: true });
-  };
+  //   try {
+  //     console.log( file );
+  //     for (const file of target.files) {
+  //       const formData = new FormData();
+  //       formData.append("file", file);
+  //       const { data } = await tesloApi.post<{ message: string }>(
+  //         "/admin/upload",
+  //         formData
+  //       );
+  //       setValue("images", [...getValues("images"), data.message], {
+  //         shouldValidate: true,
+  //       });
+  //     }
+  //   } catch (error) {
+  //     console.log({ error });
+  //   }
+  // };
 
-  const onFilesSelected = async ({ target }: ChangeEvent<HTMLInputElement>) => {
-    if (!target.files || target.files.length === 0) {
-      return;
-    }
-
-    try {
-      // console.log( file );
-      for (const file of target.files) {
-        const formData = new FormData();
-        formData.append("file", file);
-        const { data } = await tesloApi.post<{ message: string }>(
-          "/admin/upload",
-          formData
-        );
-        setValue("images", [...getValues("images"), data.message], {
-          shouldValidate: true,
-        });
-      }
-    } catch (error) {
-      console.log({ error });
-    }
-  };
-
-  const onDeleteImage = (image: string) => {
-    setValue(
-      "images",
-      getValues("images").filter((img) => img !== image),
-      { shouldValidate: true }
-    );
-  };
+  // const onDeleteImage = (image: string) => {
+  //   setValue(
+  //     "images",
+  //     getValues("images").filter((img) => img !== image),
+  //     { shouldValidate: true }
+  //   );
+  // };
 
   const onSubmit = async (form: FormData) => {
-    if (form.images.length < 2) return alert("Mínimo 2 imagenes");
+    if (form.shield_image.length < 1) return alert("Es necesario el escudo");
     setIsSaving(true);
 
     try {
       const { data } = await tesloApi({
-        url: "/admin/products",
+        url: "/admin/teams",
         method: form._id ? "PUT" : "POST", // si tenemos un _id, entonces actualizar, si no crear
         data: form,
       });
 
       console.log({ data });
       if (!form._id) {
-        router.replace(`/admin/products/${form.slug}`);
+        router.replace(`/admin/teams/${form.slug}`);
       } else {
         setIsSaving(false);
       }
@@ -177,8 +159,8 @@ const ProductAdminPage: FC<Props> = ({ product }) => {
 
   return (
     <AdminLayout
-      title={"Producto"}
-      subTitle={`Editando: ${product.title}`}
+      title={"Teams"}
+      subTitle={`Editando: ${product.team_name}`}
       icon={<DriveFileRenameOutline />}
     >
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -198,19 +180,19 @@ const ProductAdminPage: FC<Props> = ({ product }) => {
           {/* Data */}
           <Grid item xs={12} sm={6}>
             <TextField
-              label="Título"
+              label="Nombre"
               variant="filled"
               fullWidth
               sx={{ mb: 1 }}
-              {...register("title", {
+              {...register("team_name", {
                 required: "Este campo es requerido",
                 minLength: { value: 2, message: "Mínimo 2 caracteres" },
               })}
-              error={!!errors.title}
-              helperText={errors.title?.message}
+              error={!!errors.team_name}
+              helperText={errors.team_name?.message}
             />
 
-            <TextField
+            {/* <TextField
               label="Descripción"
               variant="filled"
               fullWidth
@@ -221,39 +203,11 @@ const ProductAdminPage: FC<Props> = ({ product }) => {
               })}
               error={!!errors.description}
               helperText={errors.description?.message}
-            />
-
-            <TextField
-              label="Inventario"
-              type="number"
-              variant="filled"
-              fullWidth
-              sx={{ mb: 1 }}
-              {...register("inStock", {
-                required: "Este campo es requerido",
-                min: { value: 0, message: "Mínimo de valor cero" },
-              })}
-              error={!!errors.inStock}
-              helperText={errors.inStock?.message}
-            />
-
-            <TextField
-              label="Precio"
-              type="number"
-              variant="filled"
-              fullWidth
-              sx={{ mb: 1 }}
-              {...register("price", {
-                required: "Este campo es requerido",
-                min: { value: 0, message: "Mínimo de valor cero" },
-              })}
-              error={!!errors.price}
-              helperText={errors.price?.message}
-            />
+            /> */}
 
             <Divider sx={{ my: 1 }} />
 
-            <FormControl sx={{ mb: 1 }}>
+            {/* <FormControl sx={{ mb: 1 }}>
               <FormLabel>Tipo</FormLabel>
               <RadioGroup
                 row
@@ -271,9 +225,9 @@ const ProductAdminPage: FC<Props> = ({ product }) => {
                   />
                 ))}
               </RadioGroup>
-            </FormControl>
+            </FormControl> */}
 
-            <FormControl sx={{ mb: 1 }}>
+            {/* <FormControl sx={{ mb: 1 }}>
               <FormLabel>Género</FormLabel>
               <RadioGroup
                 row
@@ -291,9 +245,9 @@ const ProductAdminPage: FC<Props> = ({ product }) => {
                   />
                 ))}
               </RadioGroup>
-            </FormControl>
+            </FormControl> */}
 
-            <FormGroup>
+            {/* <FormGroup>
               <FormLabel>Tallas</FormLabel>
               {validSizes.map((size) => (
                 <FormControlLabel
@@ -305,7 +259,7 @@ const ProductAdminPage: FC<Props> = ({ product }) => {
                   onChange={() => onChangeSize(size)}
                 />
               ))}
-            </FormGroup>
+            </FormGroup> */}
           </Grid>
 
           {/* Tags e imagenes */}
@@ -325,7 +279,7 @@ const ProductAdminPage: FC<Props> = ({ product }) => {
               error={!!errors.slug}
               helperText={errors.slug?.message}
             />
-
+            {/* 
             <TextField
               label="Etiquetas"
               variant="filled"
@@ -337,8 +291,8 @@ const ProductAdminPage: FC<Props> = ({ product }) => {
               onKeyUp={({ code }) =>
                 code === "Space" ? onNewTag() : undefined
               }
-            />
-
+            /> */}
+            {/* 
             <Box
               sx={{
                 display: "flex",
@@ -361,11 +315,11 @@ const ProductAdminPage: FC<Props> = ({ product }) => {
                   />
                 );
               })}
-            </Box>
+            </Box> */}
 
             <Divider sx={{ my: 2 }} />
 
-            <Box display="flex" flexDirection="column">
+            {/* <Box display="flex" flexDirection="column">
               <FormLabel sx={{ mb: 1 }}>Imágenes</FormLabel>
               <Button
                 color="secondary"
@@ -417,7 +371,7 @@ const ProductAdminPage: FC<Props> = ({ product }) => {
                   </Grid>
                 ))}
               </Grid>
-            </Box>
+            </Box> */}
           </Grid>
         </Grid>
       </form>
@@ -431,22 +385,22 @@ const ProductAdminPage: FC<Props> = ({ product }) => {
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const { slug = "" } = query;
 
-  let product: IProduct | null;
+  let product: ITeams | null;
 
   if (slug === "new") {
     // crear un producto
-    const tempProduct = JSON.parse(JSON.stringify(new Product()));
+    const tempProduct = JSON.parse(JSON.stringify(new Teams()));
     delete tempProduct._id;
     tempProduct.images = ["img1.jpg", "img2.jpg"];
     product = tempProduct;
   } else {
-    product = await dbProducts.getProductBySlug(slug.toString());
+    product = await dbTeams.getTeamsBySlug(slug.toString());
   }
 
   if (!product) {
     return {
       redirect: {
-        destination: "/admin/products",
+        destination: "/admin/teams",
         permanent: false,
       },
     };
@@ -459,4 +413,4 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   };
 };
 
-export default ProductAdminPage;
+export default TeamAdminPage;

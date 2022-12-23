@@ -1,4 +1,5 @@
 export interface ITeams {
+  _id?: any;
   team_name: string;
   formal_name: string;
   location_city: string;

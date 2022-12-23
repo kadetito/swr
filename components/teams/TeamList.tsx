@@ -16,7 +16,7 @@ export const TeamList: FC<Props> = ({ teams, isLoading }) => {
     <Row>
       {!isLoading &&
         teams.map((team) => (
-          <Col xs={3}>
+          <Col key={team.slug} xs={3}>
             <TeamCard key={team.slug} useteams={team} />
           </Col>
         ))}

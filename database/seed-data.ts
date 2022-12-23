@@ -520,5 +520,733 @@ export const initialData: SeedData = {
         },
       ],
     },
+
+    {
+      team_name: "Deportivo Alavés SAD",
+      formal_name: "Deportivo Alavés",
+      location_city: "Álava",
+      year_foundation: "2007",
+      shield_image:
+        "https://assets.laliga.com/assets/2021/06/28/small/42d681848c77e9a837be29b98e03557b.png",
+      actually_squad_image:
+        "https://static2-sevilla.abc.es/media/orgullodenervion/2021/06/25/s/foto-sevilla-femenino-U57321276403FAE-1200x630@abc.jpeg",
+      first_wear_image:
+        "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202208/08/00110410223423____2__1200x1200.jpg",
+      second_wear_image:
+        "https://img.planetafobal.com/2022/07/sevilla-castore-segunda-equipacion-2022-2023-wq.jpg",
+      league: {
+        identify: "0001",
+        name: "La Liga Iberdrola",
+      },
+      stadium: {
+        name: "Ciudad Deportiva José Luis Compañón (Ibaia)",
+        capacity: "400",
+        address: "Carretera N-I, s/n, 01007 Vitoria-Gasteiz, Álava",
+        image:
+          "https://sevillafc.es/sites/default/files/inline-images/Gradas%20estadio%20Jes%C3%BAs%20Navas.jpg",
+      },
+      slug: "deportivo_alaves",
+      technical_staff: [
+        {
+          name: "Iñigo Juaristi",
+          appointment: "Coach Manager",
+          image:
+            "https://sevillafc.es/sites/default/files/team_players/profiles/Entrenador_Cristian_Toro.jpg",
+        },
+      ],
+      players: [
+        {
+          name: "Esther Sullastres",
+          slug: "esther_sullastres",
+          birthday: "1993-03-20",
+          position: "Goalkeeper",
+          position_abbreviate: "GK",
+          nationality: "Spain",
+          dorsal: "1",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p249047/512x512/p249047_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Teresa Mérida",
+          slug: "teresa_merida",
+          birthday: "2002-07-17",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "4",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p248527/512x512/p248527_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Almudena Rivero",
+          slug: "almudena_rivero",
+          birthday: "2002-03-07",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "16",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p476162/512x512/p476162_t13326_2022_0_003_000.png",
+        },
+      ],
+    },
+
+    {
+      team_name: "Levante Las Planas FC",
+      formal_name: "Levante Las Planas",
+      location_city: "Sant Joan Despí (Barcelona)",
+      year_foundation: "1983",
+      shield_image:
+        "https://assets.laliga.com/assets/2022/06/20/small/14ce187ab605f5353d8e8b14ef712363.png",
+      actually_squad_image:
+        "https://static2-sevilla.abc.es/media/orgullodenervion/2021/06/25/s/foto-sevilla-femenino-U57321276403FAE-1200x630@abc.jpeg",
+      first_wear_image:
+        "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202208/08/00110410223423____2__1200x1200.jpg",
+      second_wear_image:
+        "https://img.planetafobal.com/2022/07/sevilla-castore-segunda-equipacion-2022-2023-wq.jpg",
+      league: {
+        identify: "0001",
+        name: "La Liga Iberdrola",
+      },
+      stadium: {
+        name: "Municipal Les Planes",
+        capacity: "400",
+        address: "Sant Joan Despí",
+        image:
+          "https://sevillafc.es/sites/default/files/inline-images/Gradas%20estadio%20Jes%C3%BAs%20Navas.jpg",
+      },
+      slug: "levante_las_planas",
+      technical_staff: [
+        {
+          name: "Ferrán Cabello",
+          appointment: "Coach Manager",
+          image:
+            "https://sevillafc.es/sites/default/files/team_players/profiles/Entrenador_Cristian_Toro.jpg",
+        },
+      ],
+      players: [
+        {
+          name: "Esther Sullastres",
+          slug: "esther_sullastres",
+          birthday: "1993-03-20",
+          position: "Goalkeeper",
+          position_abbreviate: "GK",
+          nationality: "Spain",
+          dorsal: "1",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p249047/512x512/p249047_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Teresa Mérida",
+          slug: "teresa_merida",
+          birthday: "2002-07-17",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "4",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p248527/512x512/p248527_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Almudena Rivero",
+          slug: "almudena_rivero",
+          birthday: "2002-03-07",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "16",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p476162/512x512/p476162_t13326_2022_0_003_000.png",
+        },
+      ],
+    },
+
+    {
+      team_name: "Levante Unión Deportiva SAD",
+      formal_name: "Levante",
+      location_city: "Valencia",
+      year_foundation: "1993",
+      shield_image:
+        "https://assets.laliga.com/assets/2019/06/07/small/levante-femenino.png",
+      actually_squad_image:
+        "https://static2-sevilla.abc.es/media/orgullodenervion/2021/06/25/s/foto-sevilla-femenino-U57321276403FAE-1200x630@abc.jpeg",
+      first_wear_image:
+        "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202208/08/00110410223423____2__1200x1200.jpg",
+      second_wear_image:
+        "https://img.planetafobal.com/2022/07/sevilla-castore-segunda-equipacion-2022-2023-wq.jpg",
+      league: {
+        identify: "0001",
+        name: "La Liga Iberdrola",
+      },
+      stadium: {
+        name: "Ciudad Deportiva de Buñol",
+        capacity: "3000",
+        address: "BUñol (Valencia)",
+        image:
+          "https://sevillafc.es/sites/default/files/inline-images/Gradas%20estadio%20Jes%C3%BAs%20Navas.jpg",
+      },
+      slug: "levante_ud",
+      technical_staff: [
+        {
+          name: "Ángel Villacampa",
+          appointment: "Coach Manager",
+          image:
+            "https://sevillafc.es/sites/default/files/team_players/profiles/Entrenador_Cristian_Toro.jpg",
+        },
+      ],
+      players: [
+        {
+          name: "Esther Sullastres",
+          slug: "esther_sullastres",
+          birthday: "1993-03-20",
+          position: "Goalkeeper",
+          position_abbreviate: "GK",
+          nationality: "Spain",
+          dorsal: "1",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p249047/512x512/p249047_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Teresa Mérida",
+          slug: "teresa_merida",
+          birthday: "2002-07-17",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "4",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p248527/512x512/p248527_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Almudena Rivero",
+          slug: "almudena_rivero",
+          birthday: "2002-03-07",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "16",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p476162/512x512/p476162_t13326_2022_0_003_000.png",
+        },
+      ],
+    },
+
+    {
+      team_name: "Madrid Club de Fútbol FemeninD",
+      formal_name: "Madrid CF",
+      location_city: "Madrid",
+      year_foundation: "2010",
+      shield_image:
+        "https://assets.laliga.com/assets/2019/06/07/small/madrid-futbol-femenino.png",
+      actually_squad_image:
+        "https://static2-sevilla.abc.es/media/orgullodenervion/2021/06/25/s/foto-sevilla-femenino-U57321276403FAE-1200x630@abc.jpeg",
+      first_wear_image:
+        "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202208/08/00110410223423____2__1200x1200.jpg",
+      second_wear_image:
+        "https://img.planetafobal.com/2022/07/sevilla-castore-segunda-equipacion-2022-2023-wq.jpg",
+      league: {
+        identify: "0001",
+        name: "La Liga Iberdrola",
+      },
+      stadium: {
+        name: "Estadio Fernando Torres",
+        capacity: "3000",
+        address: "Fuenlabrada (Madrid)",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/EstadioFernandoTorres.jpg/280px-EstadioFernandoTorres.jpg",
+      },
+      slug: "madrid_cf",
+      technical_staff: [
+        {
+          name: "Maria Pry",
+          appointment: "Coach Manager",
+          image:
+            "https://sevillafc.es/sites/default/files/team_players/profiles/Entrenador_Cristian_Toro.jpg",
+        },
+      ],
+      players: [
+        {
+          name: "Esther Sullastres",
+          slug: "esther_sullastres",
+          birthday: "1993-03-20",
+          position: "Goalkeeper",
+          position_abbreviate: "GK",
+          nationality: "Spain",
+          dorsal: "1",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p249047/512x512/p249047_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Teresa Mérida",
+          slug: "teresa_merida",
+          birthday: "2002-07-17",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "4",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p248527/512x512/p248527_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Almudena Rivero",
+          slug: "almudena_rivero",
+          birthday: "2002-03-07",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "16",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p476162/512x512/p476162_t13326_2022_0_003_000.png",
+        },
+      ],
+    },
+    {
+      team_name: "Real Betis Balompié SAD",
+      formal_name: "Real Betis",
+      location_city: "Sevilla",
+      year_foundation: "2011",
+      shield_image:
+        "https://assets.laliga.com/assets/2022/09/15/small/0f75a38f9d49c40bd932c89916bcca94.png",
+      actually_squad_image:
+        "https://static2-sevilla.abc.es/media/orgullodenervion/2021/06/25/s/foto-sevilla-femenino-U57321276403FAE-1200x630@abc.jpeg",
+      first_wear_image:
+        "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202208/08/00110410223423____2__1200x1200.jpg",
+      second_wear_image:
+        "https://img.planetafobal.com/2022/07/sevilla-castore-segunda-equipacion-2022-2023-wq.jpg",
+      league: {
+        identify: "0001",
+        name: "La Liga Iberdrola",
+      },
+      stadium: {
+        name: "Ciudad Deportiva Luis del Sol",
+        capacity: "1300",
+        address: "Sevilla",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/EstadioFernandoTorres.jpg/280px-EstadioFernandoTorres.jpg",
+      },
+      slug: "real_betis",
+      technical_staff: [
+        {
+          name: "Francisco Miguel Díaz",
+          appointment: "Coach Manager",
+          image:
+            "https://sevillafc.es/sites/default/files/team_players/profiles/Entrenador_Cristian_Toro.jpg",
+        },
+      ],
+      players: [
+        {
+          name: "Esther Sullastres",
+          slug: "esther_sullastres",
+          birthday: "1993-03-20",
+          position: "Goalkeeper",
+          position_abbreviate: "GK",
+          nationality: "Spain",
+          dorsal: "1",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p249047/512x512/p249047_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Teresa Mérida",
+          slug: "teresa_merida",
+          birthday: "2002-07-17",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "4",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p248527/512x512/p248527_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Almudena Rivero",
+          slug: "almudena_rivero",
+          birthday: "2002-03-07",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "16",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p476162/512x512/p476162_t13326_2022_0_003_000.png",
+        },
+      ],
+    },
+    {
+      team_name: "Real Sociedad de Fútbol S.A.D",
+      formal_name: "Real Sociedad.",
+      location_city: "Donosti",
+      year_foundation: "2004",
+      shield_image:
+        "https://assets.laliga.com/assets/2019/06/07/small/real-sociedad.png",
+      actually_squad_image:
+        "https://static2-sevilla.abc.es/media/orgullodenervion/2021/06/25/s/foto-sevilla-femenino-U57321276403FAE-1200x630@abc.jpeg",
+      first_wear_image:
+        "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202208/08/00110410223423____2__1200x1200.jpg",
+      second_wear_image:
+        "https://img.planetafobal.com/2022/07/sevilla-castore-segunda-equipacion-2022-2023-wq.jpg",
+      league: {
+        identify: "0001",
+        name: "La Liga Iberdrola",
+      },
+      stadium: {
+        name: "Zubieta",
+        capacity: "2500",
+        address: "Donosti (Guipúzcoa)",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/EstadioFernandoTorres.jpg/280px-EstadioFernandoTorres.jpg",
+      },
+      slug: "real_sociedad",
+      technical_staff: [
+        {
+          name: "Natalia Arroyo",
+          appointment: "Coach Manager",
+          image:
+            "https://sevillafc.es/sites/default/files/team_players/profiles/Entrenador_Cristian_Toro.jpg",
+        },
+      ],
+      players: [
+        {
+          name: "Esther Sullastres",
+          slug: "esther_sullastres",
+          birthday: "1993-03-20",
+          position: "Goalkeeper",
+          position_abbreviate: "GK",
+          nationality: "Spain",
+          dorsal: "1",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p249047/512x512/p249047_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Teresa Mérida",
+          slug: "teresa_merida",
+          birthday: "2002-07-17",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "4",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p248527/512x512/p248527_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Almudena Rivero",
+          slug: "almudena_rivero",
+          birthday: "2002-03-07",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "16",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p476162/512x512/p476162_t13326_2022_0_003_000.png",
+        },
+      ],
+    },
+
+    {
+      team_name: "Sporting Club de Huelva",
+      formal_name: "Sporting Huelva",
+      location_city: "Huelva",
+      year_foundation: "2004",
+      shield_image:
+        "https://assets.laliga.com/assets/2019/06/07/small/sporting-club.png",
+      actually_squad_image:
+        "https://static2-sevilla.abc.es/media/orgullodenervion/2021/06/25/s/foto-sevilla-femenino-U57321276403FAE-1200x630@abc.jpeg",
+      first_wear_image:
+        "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202208/08/00110410223423____2__1200x1200.jpg",
+      second_wear_image:
+        "https://img.planetafobal.com/2022/07/sevilla-castore-segunda-equipacion-2022-2023-wq.jpg",
+      league: {
+        identify: "0001",
+        name: "La Liga Iberdrola",
+      },
+      stadium: {
+        name: "Campo Federativo de la Orden",
+        capacity: "400",
+        address: "Diseminado Ronda Norte, 1, 21005 Huelva",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/EstadioFernandoTorres.jpg/280px-EstadioFernandoTorres.jpg",
+      },
+      slug: "sporting_huelva",
+      technical_staff: [
+        {
+          name: "Antonio Toledo",
+          appointment: "Coach Manager",
+          image:
+            "https://sevillafc.es/sites/default/files/team_players/profiles/Entrenador_Cristian_Toro.jpg",
+        },
+      ],
+      players: [
+        {
+          name: "Esther Sullastres",
+          slug: "esther_sullastres",
+          birthday: "1993-03-20",
+          position: "Goalkeeper",
+          position_abbreviate: "GK",
+          nationality: "Spain",
+          dorsal: "1",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p249047/512x512/p249047_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Teresa Mérida",
+          slug: "teresa_merida",
+          birthday: "2002-07-17",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "4",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p248527/512x512/p248527_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Almudena Rivero",
+          slug: "almudena_rivero",
+          birthday: "2002-03-07",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "16",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p476162/512x512/p476162_t13326_2022_0_003_000.png",
+        },
+      ],
+    },
+
+    {
+      team_name: "UD Granadilla Tenerife Egatesa",
+      formal_name: "UDG Tenerife",
+      location_city: "Santa Cruz de Tenerife",
+      year_foundation: "2013",
+      shield_image:
+        "https://assets.laliga.com/assets/2019/06/07/small/granadilla.png",
+      actually_squad_image:
+        "https://static2-sevilla.abc.es/media/orgullodenervion/2021/06/25/s/foto-sevilla-femenino-U57321276403FAE-1200x630@abc.jpeg",
+      first_wear_image:
+        "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202208/08/00110410223423____2__1200x1200.jpg",
+      second_wear_image:
+        "https://img.planetafobal.com/2022/07/sevilla-castore-segunda-equipacion-2022-2023-wq.jpg",
+      league: {
+        identify: "0001",
+        name: "La Liga Iberdrola",
+      },
+      stadium: {
+        name: "Campo de Fútbol Municipal La Palmera",
+        capacity: "3000",
+        address: "C. Deportes, 29, 38611 San Isidro, Santa Cruz de Tenerife",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/EstadioFernandoTorres.jpg/280px-EstadioFernandoTorres.jpg",
+      },
+      slug: "udg_tenerife",
+      technical_staff: [
+        {
+          name: "José Ángel Herrera",
+          appointment: "Coach Manager",
+          image:
+            "https://sevillafc.es/sites/default/files/team_players/profiles/Entrenador_Cristian_Toro.jpg",
+        },
+      ],
+      players: [
+        {
+          name: "Esther Sullastres",
+          slug: "esther_sullastres",
+          birthday: "1993-03-20",
+          position: "Goalkeeper",
+          position_abbreviate: "GK",
+          nationality: "Spain",
+          dorsal: "1",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p249047/512x512/p249047_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Teresa Mérida",
+          slug: "teresa_merida",
+          birthday: "2002-07-17",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "4",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p248527/512x512/p248527_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Almudena Rivero",
+          slug: "almudena_rivero",
+          birthday: "2002-03-07",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "16",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p476162/512x512/p476162_t13326_2022_0_003_000.png",
+        },
+      ],
+    },
+
+    {
+      team_name: "Valencia Féminas C.F.",
+      formal_name: "Valencia CF",
+      location_city: "Valencia",
+      year_foundation: "2009",
+      shield_image:
+        "https://assets.laliga.com/assets/2019/06/07/small/valencia-femenino.png",
+      actually_squad_image:
+        "https://static2-sevilla.abc.es/media/orgullodenervion/2021/06/25/s/foto-sevilla-femenino-U57321276403FAE-1200x630@abc.jpeg",
+      first_wear_image:
+        "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202208/08/00110410223423____2__1200x1200.jpg",
+      second_wear_image:
+        "https://img.planetafobal.com/2022/07/sevilla-castore-segunda-equipacion-2022-2023-wq.jpg",
+      league: {
+        identify: "0001",
+        name: "La Liga Iberdrola",
+      },
+      stadium: {
+        name: "Estadio Municipal Antonio Puchades",
+        capacity: "3000",
+        address: "Paterna (Valencia)",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/EstadioFernandoTorres.jpg/280px-EstadioFernandoTorres.jpg",
+      },
+      slug: "valencia_cf",
+      technical_staff: [
+        {
+          name: "Andrea Esteban Catalán",
+          appointment: "Coach Manager",
+          image:
+            "https://sevillafc.es/sites/default/files/team_players/profiles/Entrenador_Cristian_Toro.jpg",
+        },
+      ],
+      players: [
+        {
+          name: "Esther Sullastres",
+          slug: "esther_sullastres",
+          birthday: "1993-03-20",
+          position: "Goalkeeper",
+          position_abbreviate: "GK",
+          nationality: "Spain",
+          dorsal: "1",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p249047/512x512/p249047_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Teresa Mérida",
+          slug: "teresa_merida",
+          birthday: "2002-07-17",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "4",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p248527/512x512/p248527_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Almudena Rivero",
+          slug: "almudena_rivero",
+          birthday: "2002-03-07",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "16",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p476162/512x512/p476162_t13326_2022_0_003_000.png",
+        },
+      ],
+    },
+
+    {
+      team_name: "Villarreal Club de Fútbol SAD.",
+      formal_name: "Villarreal CF",
+      location_city: "Villareal (Castelló)",
+      year_foundation: "2009",
+      shield_image:
+        "https://assets.laliga.com/assets/2021/06/28/small/9fbd53c24db4a5ff2257fa8ba57b59d4.png",
+      actually_squad_image:
+        "https://static2-sevilla.abc.es/media/orgullodenervion/2021/06/25/s/foto-sevilla-femenino-U57321276403FAE-1200x630@abc.jpeg",
+      first_wear_image:
+        "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202208/08/00110410223423____2__1200x1200.jpg",
+      second_wear_image:
+        "https://img.planetafobal.com/2022/07/sevilla-castore-segunda-equipacion-2022-2023-wq.jpg",
+      league: {
+        identify: "0001",
+        name: "La Liga Iberdrola",
+      },
+      stadium: {
+        name: "Campo 5 de la Ciudad Deportiva del Villarreal Club de Fútbol",
+        capacity: "3000",
+        address: "Villareal (Castelló)",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/EstadioFernandoTorres.jpg/280px-EstadioFernandoTorres.jpg",
+      },
+      slug: "villarreal_cf",
+      technical_staff: [
+        {
+          name: "Sara Monforte",
+          appointment: "Coach Manager",
+          image:
+            "https://sevillafc.es/sites/default/files/team_players/profiles/Entrenador_Cristian_Toro.jpg",
+        },
+      ],
+      players: [
+        {
+          name: "Esther Sullastres",
+          slug: "esther_sullastres",
+          birthday: "1993-03-20",
+          position: "Goalkeeper",
+          position_abbreviate: "GK",
+          nationality: "Spain",
+          dorsal: "1",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p249047/512x512/p249047_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Teresa Mérida",
+          slug: "teresa_merida",
+          birthday: "2002-07-17",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "4",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p248527/512x512/p248527_t13326_2022_0_003_000.png",
+        },
+        {
+          name: "Almudena Rivero",
+          slug: "almudena_rivero",
+          birthday: "2002-03-07",
+          position: "Defensive",
+          position_abbreviate: "DF",
+          nationality: "Spain",
+          dorsal: "16",
+          club: "Sevilla CF",
+          image:
+            "https://assets.laliga.com/squad/2022/t13326/p476162/512x512/p476162_t13326_2022_0_003_000.png",
+        },
+      ],
+    },
   ],
 };

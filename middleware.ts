@@ -1,34 +1,25 @@
-import { NextFetchEvent, NextRequest, NextResponse } from 'next/server';
-import { getToken } from 'next-auth/jwt';
-// import { jwt } from '../../utils';
+import { NextResponse } from "next/server";
+import { NextRequestWithAuth, withAuth } from "next-auth/middleware";
 
-
-export async function middleware( req: NextRequest | any, ev: NextFetchEvent ) {
-
-    const session: any = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
-
-    if ( !session ) {
-        return new Response( JSON.stringify({ message: 'No autorizado' }), {
-            status: 401,
-            headers: {
-                'Content-Type':'application/json'
-            }
-        });
+export default withAuth(
+  function middleware(req: NextRequestWithAuth) {
+    if (req.nextUrl.pathname.startsWith("/admin")) {
+      return NextResponse.next();
     }
+    const { role } = req.nextauth.token?.user as any;
+    const validRoles = ["admin"];
 
-    const validRoles = ['admin','super-user','SEO'];
-    if ( !validRoles.includes( session.user.role ) ) {
-        return new Response( JSON.stringify({ message: 'No autorizado' }), {
-            status: 401,
-            headers: {
-                'Content-Type':'application/json'
-            }
-        });
+    if (!validRoles.includes(role)) {
+      return NextResponse.redirect(new URL("/admin", req.url));
     }
+  },
+  {
+    callbacks: {
+      authorized: ({ token }) => !!token,
+    },
+  }
+);
 
-
-    return NextResponse.next();
-
-}
-
-
+export const config = {
+  matcher: ["/admin/:path*", "/api/admin/:path*"],
+};
